@@ -1,59 +1,30 @@
-.App {
-    text-align: center;
-}
-
-/*.App-logo {*/
-/*  height: 40vmin;*/
-/*  pointer-events: none;*/
-/*}*/
-
-/*@media (prefers-reduced-motion: no-preference) {*/
-/*  .App-logo {*/
-/*    animation: App-logo-spin infinite 20s linear;*/
-/*  }*/
+/*.App {*/
+/*    text-align: center;*/
 /*}*/
 
 .App-header {
-    background-color: #282c34;
+    /*background-color: #282c34;*/
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
 }
-
-/*.App-link {*/
-/*  color: #61dafb;*/
-/*}*/
-
-/*@keyframes App-logo-spin {*/
-/*  from {*/
-/*    transform: rotate(0deg);*/
-/*  }*/
-/*  to {*/
-/*    transform: rotate(360deg);*/
-/*  }*/
-/*}*/
-
 
 .calc {
     height: auto;
     width: 300px;
-    /*height: 500px;*/
     border-radius: 20px;
-    background: #000000;
+    background: #2f2f2f;
     color: #fff;
     font-family: Arial;
     padding: 18px;
-    box-shadow: 4px 4px 4px #4f4f4f;
+    user-select: none;
 }
 
 .calc-screen {
-    height: auto;
+    /*height: auto;*/
     min-height: 125px;
-    /*height: 125px;*/
     padding: 10px;
     display: grid;
     justify-items: end;
@@ -66,7 +37,6 @@
 .calc-screen p {
     text-align: right;
     font-size: 3rem;
-    /*font-size: calc(4rem - 50%);*/
     margin: 0;
 }
 
@@ -85,13 +55,14 @@
 .btn {
     width: 60px;
     height: 60px;
-    background: #333;
+    background: #7a7a7a;
+    border: none;
     border-radius: 50%;
     text-align: center;
     line-height: 60px;
     font-size: 1.5rem;
     cursor: pointer;
-    user-select: none;
+    color: #fff;
 }
 
 
@@ -104,9 +75,9 @@
 }
 
 .btn.bgLightBlue {
-    background: #84abd3;
+    background: #9b697a;
 }
 
 .btn.bgBlue {
-    background: #1a6ea1;
+    background: #7e1c40;
 }
