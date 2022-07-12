@@ -38,24 +38,19 @@ function App() {
     }
 
     const clear = () => {
-        console.log(typeof input, input, input.length)
-        setInput(input => input.toString())
-        setSecondNumber(secondNumber => secondNumber.toString())
-        console.log(typeof input, input, input.length)
+        setInput(prevInput => prevInput.toString())
+        setSecondNumber(prevSecondNumber => prevSecondNumber.toString())
         secondNumber !== '' ? setSecondNumber(prevSecondNumber => prevSecondNumber.substring(0, prevSecondNumber.length - 1)) :
             sign !== '' ? setSign('') :
                 input.length === 1 ? setInput('0') : setInput(prevInput => prevInput.substring(0, prevInput.length - 1))
-        console.log(typeof input, input, input.length)
-        console.log(typeof secondNumber, secondNumber, secondNumber.length)
     }
 
     const operations = () => {
-        console.log(typeof input, input, secondNumber, sign)
         switch (sign) {
             case ('+'):
                 setInput((+input) + (+secondNumber))
                 // setInput(prevInput => (+prevInput) + (+secondNumber))
-                console.log(typeof input, input, secondNumber, sign)
+                // console.log(typeof input, input, secondNumber, sign)
                 setSecondNumber('')
                 setSign('')
                 console.log(typeof input, input, typeof secondNumber, secondNumber, sign)
@@ -98,12 +93,12 @@ function App() {
                     <p>{input} {sign} {secondNumber}</p>
                 </div>
                 <div className="buttons">
-                    <button className="btn ac bgLightBlue" onClick={clearAll}>AC</button>
-                    <button className="btn c bgLightBlue" onClick={clear}>C</button>
+                    <button className="btn ac bgLightBlue" onClick={() => clearAll()}>AC</button>
+                    <button className="btn c bgLightBlue" onClick={() => clear()}>C</button>
                     <button className="btn plusMinus bgLightBlue" onClick={inv}>+/-</button>
                     <button className="btn division bgBlue" name='/' onClick={insertSign}>/</button>
 
-                    <button className="btn seven" name='7' onClick={insert}>7</button>
+                    <button className="btn seven" name='7' onClick={(event) => insert(event)}>7</button>
                     <button className="btn eight" name='8' onClick={insert}>8</button>
                     <button className="btn nine" name='9' onClick={insert}>9</button>
                     <button className="btn multiply bgBlue" name='✕' onClick={insertSign}>✕</button>
@@ -125,7 +120,7 @@ function App() {
                 </div>
             </div>
         </header>
-    );
+    )
 }
 
 export default App;

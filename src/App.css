@@ -67,11 +67,11 @@
 
 
 .btn:hover {
-    filter: brightness(120%);
+    filter: brightness(150%);
 }
 
 .btn:active {
-    filter: brightness(90%);
+    filter: brightness(70%);
 }
 
 .btn.bgLightBlue {
